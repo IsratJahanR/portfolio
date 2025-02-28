@@ -1,0 +1,126 @@
+<section id="projects" class="h-screen py-12 bg-gray-50">
+    <h2 class="text-3xl font-extrabold text-center text-green-800 mb-8">My Projects</h2>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 px-6">
+
+        <!-- CareHUB -->
+        <div class="project-card border-green-500">
+            <h3 class="project-title">CareHUB - Salon & Parlor Booking</h3>
+            <p class="project-tech">Tech: HTML, Tailwind CSS, JavaScript, Django, MySQL</p>
+            <p class="project-desc">An online booking system allowing users to find, compare, and book salons based on reviews, pricing, and availability. Features barber selection and real-time slot booking.</p>
+            <a href="https://github.com/Learnathon-By-Geeky-Solutions/quantum-trio" target="_blank" class="project-btn">View on GitHub</a>
+        </div>
+
+        <!-- Dairy Product eCommerce -->
+        <div class="project-card border-blue-500">
+            <h3 class="project-title">Dairy Product eCommerce</h3>
+            <p class="project-tech">Tech: Java Swing, AWT, Thread, MySQL</p>
+            <p class="project-desc">Developed a dairy product web application with a user-friendly interface for effortless browsing and ordering system.</p>
+            <a href="https://github.com/IsratJahanR/Dairy_Product_e-Commerce-website" target="_blank" class="project-btn">View on GitHub</a>
+        </div>
+
+        <!-- Typing Game -->
+        <div class="project-card border-yellow-500">
+            <h3 class="project-title">Typing Game</h3>
+            <p class="project-tech">Tech: C/C++, C Graphics, OOP, File System</p>
+            <p class="project-desc">Created a typing game to improve speed and accuracy. Implemented a file system to track user progress.</p>
+            <a href="https://github.com/IsratJahanR/Typing-game-project-with-cpp" target="_blank" class="project-btn">View on GitHub</a>
+        </div>
+
+        <!-- Bazar Dor Monitoring -->
+        <div class="project-card border-red-500">
+            <h3 class="project-title">Bazar Dor Monitoring</h3>
+            <p class="project-tech">Tech: Java Swing, AWT, Thread, MySQL</p>
+            <p class="project-desc">A software project designed to monitor and track daily product prices. Users can report high prices to admins via product ID.</p>
+            <a href="https://github.com/IsratJahanR/Bazar_Dor_Monitizing_with_java/tree/main/Bazar_dor" target="_blank" class="project-btn">View on GitHub</a>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    .project-card {
+        background: white;
+        padding: 20px;
+        border-left: 5px solid;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Automatic transition for project titles without layout shifting */
+    .project-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 5px;
+        display: inline-block;
+        transition: color 3s ease, transform 3s ease;
+    }
+
+    /* Keyframes for color change */
+    @keyframes titleColorChange {
+        0% {
+            color: #34D399;
+        }
+        33% {
+            color: #059669;
+        }
+        66% {
+            color: #38A169;
+        }
+        100% {
+            color: #34D399;
+        }
+    }
+
+    /* Keyframes for font size change */
+    @keyframes titleSizeChange {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .project-title {
+        animation: titleColorChange 6s infinite ease-in-out, titleSizeChange 6s infinite ease-in-out;
+    }
+
+    .project-tech {
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+
+    .project-desc {
+        font-size: 0.85rem;
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+    .project-btn {
+        display: inline-block;
+        padding: 6px 12px;
+        background-color: #34D399;
+        color: white;
+        font-size: 0.85rem;
+        font-weight: bold;
+        border-radius: 4px;
+        transition: background 0.3s;
+    }
+
+    .project-btn:hover {
+        background-color: #059669;
+    }
+</style>

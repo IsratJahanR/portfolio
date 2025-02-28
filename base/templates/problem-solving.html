@@ -1,0 +1,177 @@
+<section id="problem-solving" class="h-screen py-12 bg-gray-50">
+    <h2 class="text-3xl font-extrabold text-center text-green-800 mb-8">Problem Solving Status</h2>
+    
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-green-800 items-center mx-auto px-10 mt-6">
+
+        <!-- Contest History (Left Column) -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-extrabold text-center mb-4">Contest History</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-3">
+                <li>✅ Participated in <strong >350</strong>+ contests on 
+                    <a href="https://codeforces.com/profile/Israt_Jahan_R" class="text-blue-600 hover:underline">Codeforces</a>, 
+                    <a href="https://leetcode.com/u/IsratJahanR/" class="text-blue-600 hover:underline">Leetcode</a>, 
+                    <a href="https://www.codechef.com/users/israt_jahan_r" class="text-blue-600 hover:underline">Codechef</a>, 
+                    <a href="https://atcoder.jp/users/Israt041" class="text-blue-600 hover:underline">Atcoder</a>.
+                </li>
+                <li>✅ Competed in onsite contests:  <strong>NGPC</strong>, UGV South Zone Contests. 
+                    <a href="https://github.com/IsratJahanR/Certificates/blob/main/NGPC-2022.pdf" class="text-blue-600 hover:underline">[Certificate]</a>
+                </li>
+            </ul>
+        </div>
+    
+        <!-- Counter Section (Right Column) -->
+        <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center space-y-6">            
+            <div class="counter-box text-center">
+                <h2 id="problems-solved" class="text-4xl font-extrabold">0</h2>
+                <p class="text-lg uppercase tracking-widest text-gray-500">Problems Solved</p>
+            </div>
+            
+            <div class="counter-box text-center">
+                <h2 id="contest-count" class="text-4xl font-extrabold">0</h2>
+                <p class="text-lg uppercase tracking-widest text-gray-500">Contests Participated</p>
+            </div>
+        </div>
+    
+    </div>
+    
+
+    <!-- Problem Solving Cards -->
+    <div class="max-w-6xl mx-auto px-10 mt-6 overflow-hidden">
+        <div class="slider flex space-x-8">
+            
+            <div class="problem-card border-yellow-500">
+                <h3 class="problem-title">Leetcode</h3>
+                <p class="problem-tech">Top 44%</p>
+                <p class="problem-desc">Solved <span id="lc-solved">400</span>+ problems</p>
+                <p class="problem-desc">Max Rating: <span id="lc-rating">1496</span></p>
+                <a href="https://leetcode.com/u/IsratJahanR/" class="problem-btn">Click Here</a>
+            </div>
+
+            <div class="problem-card border-red-500">
+                <h3 class="problem-title">Atcoder</h3>
+                <p class="problem-tech">abcd</p>
+                <p class="problem-desc">Solved <span id="atc-solved">50</span>+ problems</p>
+                <p class="problem-desc">Max Rating: <span id="atc-rating">***</span></p>
+                <a href="https://atcoder.jp" class="problem-btn">Click Here</a>
+            </div>
+
+            <div class="problem-card border-blue-500">
+                <h3 class="problem-title">Codechef</h3>
+                <p class="problem-tech"> Coder</p>
+                <p class="problem-desc">Solved <span id="cc-solved">**</span>+ problems</p>
+                <p class="problem-desc">Max Rating: <span id="cc-rating">***</span></p>
+                <a href="https://www.codechef.com" class="problem-btn">Click Here</a>
+            </div>
+
+            <div class="problem-card border-purple-500">
+                <h3 class="problem-title">Codeforces</h3>
+                <p class="problem-tech" id="cf-rank-card">Pupil</p>
+                <p class="problem-desc">Solved <span id="cf-solved">1200</span>+ problems</p>
+                <p class="problem-desc">Max Rating: <span id="cf-rating-card">1368</span></p>
+                <a href="https://codeforces.com/profile/Israt_Jahan_R" class="problem-btn">Click Here</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style>
+    .slider {
+        display: flex;
+        gap: 2rem;
+        white-space: nowrap;
+        transition: transform 1s ease-in-out;
+    }
+
+    .problem-card {
+        width: 280px;
+        height: 200px;
+        flex-shrink: 0;
+        background: white;
+        padding: 20px;
+        border-left: 5px solid;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .problem-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .problem-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .problem-tech {
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+
+    .problem-desc {
+        font-size: 0.85rem;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    .problem-btn {
+        display: inline-block;
+        padding: 6px 12px;
+        background-color: #34D399;
+        color: white;
+        font-size: 0.85rem;
+        font-weight: bold;
+        border-radius: 4px;
+        transition: background 0.3s;
+    }
+
+    .problem-btn:hover {
+        background-color: #059669;
+    }
+</style>
+
+<script>
+    function animateNumber(id, start, end, duration) {
+        let obj = document.getElementById(id);
+        let range = end - start;
+        let stepTime = Math.abs(Math.floor(duration / range));
+        let current = start;
+        let increment = end > start ? 5 : -1;
+        
+        let timer = setInterval(() => {
+            current += increment;
+            obj.textContent = current;
+            if (current === end) {
+                clearInterval(timer);
+            }
+        }, stepTime);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        animateNumber("problems-solved", 0, 2400, 2000);
+        animateNumber("contest-count", 0, 350, 2000);
+
+        setTimeout(() => {
+            document.getElementById("cf-rating").textContent = "1450"; 
+            document.getElementById("cf-rank").textContent = "Specialist"; 
+            document.getElementById("cf-rating-card").textContent = "1450"; 
+            document.getElementById("cf-rank-card").textContent = "Specialist"; 
+        }, 2500);
+
+        const slider = document.querySelector(".slider");
+        let index = 0;
+
+        function slide() {
+            index = (index + 1) % 2;
+            slider.style.transform = `translateX(-${index * 300}px)`;
+        }
+
+        setInterval(slide, 5000);
+    });
+</script>

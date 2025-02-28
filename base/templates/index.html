@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+   
+
+    <!-- Animate.css for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        
+    </style>
+</head>
+<body >
+    
+    <!-- Floating Navbar -->
+
+    <nav class="fixed top-0 left-0 w-full bg-cust text-green-900 shadow-md py-4 z-50">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <a href="#home" class="flex items-center space-x-2">
+                <img src="{% static 'images/icon.jpg' %}" alt="Logo" class="h-12 w-12 rounded-full">
+            </a>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="hover:text-green-500">Home</a></li>
+                <li><a href="#about" class="hover:text-green-500">About</a></li>
+                <li><a href="#education" class="hover:text-green-500">Education</a></li>
+                <li><a href="#skills" class="hover:text-green-500">Skills</a></li>
+                <li><a href="#projects" class="hover:text-green-500">Projects</a></li>
+                <li><a href="#research" class="hover:text-green-500">Research</a></li>
+                <li><a href="#problem-solving" class="hover:text-green-500">Problem Solving</a></li>
+                <li><a href="#blogs" class="hover:text-green-500">Blogs</a></li>
+                <li><a href="#contact" class="hover:text-green-500">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+<!-- Floating Social Links (Black & White) -->
+<div class="fixed left-0 top-1/2 transform -translate-y-1/2 space-y-4 p-3  bg-opacity-90 rounded-r-lg shadow-lg z-50">
+    <a href="https://github.com/IsratJahanR" target="_blank" class="block p-3 text-black text-2xl hover:bg-gray-300 rounded">
+        <i class="fa-brands fa-github"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/israt-jahan-788a0619a/" target="_blank" class="block p-3 text-black text-2xl hover:bg-gray-300 rounded">
+        <i class="fa-brands fa-linkedin"></i>
+    </a>
+    <a href="https://www.facebook.com/isr.han.ma/" target="_blank" class="block p-3 text-black text-2xl hover:bg-gray-300 rounded">
+        <i class="fa-brands fa-facebook"></i>
+    </a>
+    <a href="https://www.instagram.com/jahanisrat__/" target="_blank" class="block p-3 text-black text-2xl hover:bg-gray-300 rounded">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+</div>
+
+
+
+
+
+
+
+
+    {% block content %}
+        {% include 'home.html' %}
+
+        {% include 'about.html' %}
+
+        {% include 'education.html' %}
+
+        {% include 'skills.html' %}
+
+        {% include 'projects.html' %}
+
+        {% include 'research.html' %}
+        
+        {% include 'problem-solving.html' %}
+        
+        {% include 'contact.html' %}
+
+    {% endblock %}
+    
+    <footer id="footer" class="bg-cust text-green-900 py-4 shadow-md">
+    
+        <!-- Copyright -->
+        <div class="text-center text-xs text-gray-700 mt-2">
+            © 2025 Israt Jahan Reshma. All Rights Reserved.
+        </div>
+    </footer>
+    
+    
+</body>
+</html>

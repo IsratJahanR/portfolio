@@ -1,0 +1,90 @@
+<section id="research" class="py-12 bg-gray-50">
+    <h2 class="text-3xl font-extrabold text-center text-gray-800 mb-8">Selected Research Work</h2>
+
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 px-10">
+
+        <!-- Research Work 1 -->
+        <div class="group bg-white shadow-md p-6 rounded-lg border-t-4 border-green-500 hover:shadow-lg transition-all transform hover:scale-105 research-card">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Predicting CSE Undergraduate Students’ Careers Using Machine Learning Algorithms in the Context of Bangladesh</h3>
+            <span class="text-sm text-gray-500 mb-3">(publication ongoing)</span>
+            <p class="text-sm text-gray-700 mb-4">
+                A survey of 468 CSE students from various Bangladeshi universities identified key factors influencing career choices, including academic skills, soft skills, and job preferences. Outcome: Most students prefer the software development sector. Machine learning algorithms like Logistic Regression, Decision Tree, Random Forest, and others were applied, with Random Forest achieving the highest accuracy.
+            </p>
+            <div class="mt-4 text-right">
+                <a href="https://github.com/IsratJahanR/LinkInTweetMessage" target="_blank" class="text-green-500 hover:text-green-700 text-sm">Link</a>
+            </div>
+        </div>
+
+        <!-- Research Work 2 -->
+        <div class="group bg-white shadow-md p-6 rounded-lg border-t-4 border-green-500 hover:shadow-lg transition-all transform hover:scale-105 research-card">
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Characterizing the Role of Link in Tweets by npm Maintainers: Source, Purpose, and Decay</h3>
+            <span class="text-sm text-gray-500 mb-3">(publication ongoing)</span>
+            <p class="text-sm text-gray-700 mb-4">
+                Investigated 18,408 links in NPM maintainers’ tweets to understand their role in the NPM ecosystem. Outcome: Most links target package management content like blogs and tutorials. 80% are unique, and 20% are repeated. GitHub is the top domain after Twitter, with 5% of links inaccessible.
+            </p>
+            <div class="mt-4 text-right">
+                <a href="https://github.com/IsratJahanR/LinkInTweetMessage" target="_blank" class="text-green-500 hover:text-green-700 text-sm">Link</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* Ensure the changes only affect the research section */
+    #research .group {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #research .group:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Title and Description Styling */
+    #research h3 {
+        transition: color 0.3s ease;
+    }
+
+    #research h3:hover {
+        color: #4CAF50;
+    }
+
+    #research p {
+        transition: color 0.3s ease;
+    }
+
+    #research p:hover {
+        color: #4CAF50;
+    }
+
+    .text-sm {
+        line-height: 1.5;
+    }
+
+    /* GitHub Link Styling */
+    #research a {
+        transition: color 0.3s ease;
+    }
+
+    #research a:hover {
+        color: #388E3C;
+    }
+
+    /* GitHub Link Positioning */
+    #research .mt-4 {
+        margin-top: 1rem;
+    }
+
+    /* Flexbox for bottom-right positioning */
+    #research .research-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    #research .text-right {
+        text-align: right;
+    }
+</style>

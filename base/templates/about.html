@@ -1,0 +1,59 @@
+{% load static %}
+
+<section id="about" class="h-screen flex flex-col items-center justify-center text-center text-gray-900 relative bg-cover bg-center">
+    <h2 class="text-5xl font-bold text-green-800 mb-6"></h2>
+    <div class="max-w-5xl w-full    flex flex-col md:flex-row items-center md:items-start">
+        
+        <!-- Left Side: Profile Image -->
+        <div class="w-1/3">
+            <img src="{% static 'images/my.jpg' %}" alt="Israt Jahan Reshma" class="w-60 h-60 rounded-full object-cover">
+        </div>
+
+        <!-- Right Side: About Content -->
+        <div class="w-2/3 md:ml-10 mt-6 md:mt-0 text-gray-900 text-center md:text-left">
+            
+            <p class="text-xl font-medium">Hi Guys!</p>
+            <p class="mt-3  leading-relaxed">
+                I received my B.Sc. in Computer Science & Engineering from  
+                Gopalganj Science and Technology University, Gopalganj.Currently, I'm looking for an opportunity as a <strong>Backend Developer</strong> in a software development company.  
+                My key interests lie in Python Stack, Django, ML/AI, and Data Science.
+            </p>
+
+            <div class="mt-6">
+                <ul class="mt-3 space-y-2">
+                    <li><strong>Name:</strong> Israt Jahan Reshma</li>
+                    <li><strong>Sex:</strong> Female</li>
+                    <li><strong>Birth Date:</strong> 31-12-2001</li>
+                    <li><strong>Nationality:</strong> Bangladeshi</li>
+                    <li><strong>Permanent Address:</strong> Maheshpur, Debidwar, Comilla</li>
+                    <li><strong>Current Address:</strong> Comilla</li>
+                    <li><strong>Email:</strong> 
+                        <a href="mailto:israt18cse241@bsmrstu.edu.bd" class="text-green-600 hover:underline">
+                            israt18cse241@bsmrstu.edu.bd
+                        </a>,  
+                        <a href="mailto:isratjahan151q@gmail.com" class="text-green-600 hover:underline">
+                            isratjahan151q@gmail.com
+                        </a>
+                    </li>
+                    <li><strong>Phone:</strong> 
+                        <a href="tel:+8801770090141" class="text-green-600 hover:underline">
+                            +88 01770090141
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Buttons -->
+            <div class="mt-8 flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6">
+                <a href="{% static 'CV_israt.pdf' %}" download 
+                   class="px-6 py-3 text-white bg-gray-600 rounded-md shadow-lg hover:bg-gray-400 transition">
+                    📄 Download Resume
+                </a>
+                <a href="#contact" 
+                   class="px-6 py-3 text-white bg-blue-400 rounded-md shadow-lg hover:bg-blue-700 transition">
+                    🤝 Let's Connect
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

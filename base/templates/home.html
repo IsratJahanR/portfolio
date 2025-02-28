@@ -1,0 +1,66 @@
+{% load static %}
+<style>
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .animate-fadeInUp {
+        animation: fadeInUp 1s ease-out forwards;
+    }
+    .delay-100 { animation-delay: 0.2s; }
+    .delay-200 { animation-delay: 0.4s; }
+    .delay-300 { animation-delay: 0.6s; }
+    .delay-400 { animation-delay: 0.8s; }
+    .delay-500 { animation-delay: 1s; }
+    .bg-cust{
+        background-color:rgb(180,229,208);
+    }
+</style>
+<section id="home" class="h-screen flex flex-col items-center justify-center text-center text-gray-800 relative bg-cover bg-center"
+style="background-image: url('{% static 'images/background.avif' %}');">
+
+    <!-- Overlay for better readability -->
+    <div class="absolute inset-0 bg-white bg-opacity-80"></div>
+
+    <!-- Content -->
+    <div class="relative z-10">
+        <!-- Small Intro Text -->
+        <p class="text-lg mb-2 opacity-0 animate-fadeInUp delay-100">Hi, This is</p>
+
+        <!-- Name with Fancy Animation -->
+        <h1 class="text-6xl font-extrabold tracking-wide text-green-700 opacity-0 animate-fadeInUp delay-200">
+            Israt Jahan Reshma
+        </h1>
+
+        <!-- Subtitle -->
+        <h2 class="text-3xl mt-4 font-semibold italic tracking-wide text-green-600 opacity-0 animate-fadeInUp delay-300">
+            A Passionate Competitive Programmer
+        </h2>
+
+        <!-- Description -->
+        <p class="mt-6 text-lg max-w-3xl leading-relaxed opacity-0 animate-fadeInUp delay-400">
+            🚀 I am a dedicated and enthusiastic CSE student at  
+            <span class="font-bold text-green-500">GSTU</span>,  
+            with a strong foundation in  
+            <span class="text-green-600 font-semibold">Data Structures & Algorithms</span>.  
+            I have a keen interest in  
+            <span class="font-semibold text-green-700">Python, Backend Development, Django, and ML/AI</span>,  
+            continuously refining my skills in solving complex problems and building scalable applications.
+        </p>
+        
+    </div>
+
+    <!-- Call-to-Action Button with Continuous Animation -->
+    <a href="#contact" class="absolute right-10 bottom-10 px-8 py-4 bg-green-500 text-white font-bold text-lg rounded-full shadow-lg  
+        hover:bg-green-600 hover:-translate-y-1 hover:scale-105 transition-all duration-300 ease-in-out 
+        animate-bounce">
+        🚀 Let's Connect!
+    </a>
+
+</section>
