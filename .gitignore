@@ -1,0 +1,51 @@
+# Virtual environment
+venv/
+env/
+*.venv
+
+# Python bytecode files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django specific files
+db.sqlite3
+*.log
+
+# Secret settings (e.g., local environment variables)
+.env
+*.env
+
+# VS Code settings
+.vscode/
+.idea/
+
+# PyCharm settings
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# MacOS system files
+.DS_Store
+
+# Node.js dependencies (if using npm/yarn for frontend)
+node_modules/
+
+# Static and media files (if generated)
+staticfiles/
+media/
+
+# Migrations cache (optional)
+**/migrations/__pycache__/
+
+# Compiled Cython files
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Coverage reports
+htmlcov/
+.coverage
+.cache/
