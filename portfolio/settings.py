@@ -19,7 +19,7 @@ SECRET_KEY = 'django-insecure-2s5!x)(1w_x1i3nq$vzknx$gl5+qkhe_p(asb*u7%6#k%5na-$
 # DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
 
 # ALLOWED_HOSTS = ['https://portfolio-w6wf.onrender.com/', 'localhost', '127.0.0.1']
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.vercel.app', 'localhost' ,'127.0.0.1']
 
@@ -121,10 +121,8 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
   os.path.join(BASE_DIR, 'static')  
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build','static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build','staticfiles')
 
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
