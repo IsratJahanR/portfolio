@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Israts' site</title>
     <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
 
     <!-- Tailwind CSS -->
@@ -16,40 +16,50 @@
 
     <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <style>
-        
-    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {},
+            }
+        }
+    </script>
 </head>
 <body >
     
     <!-- Floating Navbar -->
 
-    <nav class="fixed top-0 left-0 w-full bg-cust text-green-900 shadow-md py-4 z-50">
+    <nav id="navbar" class="fixed top-0 left-0 w-full bg-cust text-green-900 shadow-md py-4 z-50 transition-transform duration-300">
         <div class="container mx-auto flex justify-between items-center px-6">
             <a href="#home" class="flex items-center space-x-2">
                 <img src="{% static 'images/icon.jpg' %}" alt="Logo" class="h-12 w-12 rounded-full">
+                <h1 class="text-2xl font-bold text-black md:text-left italic">Israts' site</h1>
             </a>
-            <ul class="flex space-x-6">
-                <li><a href="#home" class="hover:text-green-500">Home</a></li>
-                <li><a href="#about" class="hover:text-green-500">About</a></li>
-                <li><a href="#education" class="hover:text-green-500">Education</a></li>
-                <li><a href="#skills" class="hover:text-green-500">Skills</a></li>
-                <li><a href="#projects" class="hover:text-green-500">Projects</a></li>
-                <li><a href="#research" class="hover:text-green-500">Research</a></li>
-                <li><a href="#problem-solving" class="hover:text-green-500">Problem Solving</a></li>
-                <li><a href="#blogs" class="hover:text-green-500">Blogs</a></li>
-                <li><a href="#contact" class="hover:text-green-500">Contact</a></li>
+            
+    
+            <!-- Hamburger Menu -->
+            <button id="menu-toggle" class="md:hidden text-green-900 text-3xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+    
+            <ul id="menu" class="hidden md:flex space-x-6 absolute md:static bg-cust w-full md:w-auto left-0 top-full md:top-auto flex-col md:flex-row shadow-md md:shadow-none p-4 md:p-0">
+                <li><a href="#home" class="block py-2 px-1 hover:text-green-500">Home</a></li>
+                <li><a href="#about" class="block py-2 px-1 hover:text-green-500">About</a></li>
+                <li><a href="#education" class="block py-2 px-1 hover:text-green-500">Education</a></li>
+                <li><a href="#skills" class="block py-2 px-1 hover:text-green-500">Skills</a></li>
+                <li><a href="#projects" class="block py-2 px-1 hover:text-green-500">Projects</a></li>
+                <li><a href="#research" class="block py-2 px-1 hover:text-green-500">Research</a></li>
+                <li><a href="#problem-solving" class="block py-2 px-1 hover:text-green-500">Problem Solving</a></li>
+                <li><a href="#blogs" class="block py-2 px-1 hover:text-green-500">Blogs</a></li>
+                <li><a href="#contact" class="block py-2 px-1 hover:text-green-500">Contact</a></li>
             </ul>
         </div>
     </nav>
     
+    
 <!-- Floating Social Links (Black & White) -->
-<div class="fixed left-0 top-1/2 transform -translate-y-1/2 space-y-4 p-3  bg-opacity-90 rounded-r-lg shadow-lg z-50">
+<div class="fixed left-0 top-1/2 transform -translate-y-1/2 space-y-4 p-3 bg-opacity-90 rounded-r-lg shadow-lg z-50 hidden md:block">
     <a href="https://github.com/IsratJahanR" target="_blank" class="block p-3 text-black text-2xl hover:bg-gray-300 rounded">
         <i class="fa-brands fa-github"></i>
     </a>
@@ -90,13 +100,61 @@
 
     {% endblock %}
     
-    <footer id="footer" class="bg-cust text-green-900 py-4 shadow-md">
-    
+    <!-- Footer -->
+<footer id="footer" class="bg-cust text-green-900 py-4 shadow-md">
+    <div class="text-center text-xs text-gray-700 mt-2">
+        <!-- Floating Social Links in Footer for Mobile -->
+        <div class="md:hidden flex justify-center space-x-4">
+            <a href="https://github.com/IsratJahanR" target="_blank" class="p-3 text-black text-2xl hover:bg-gray-300 rounded">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/israt-jahan-788a0619a/" target="_blank" class="p-3 text-black text-2xl hover:bg-gray-300 rounded">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/isr.han.ma/" target="_blank" class="p-3 text-black text-2xl hover:bg-gray-300 rounded">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/jahanisrat__/" target="_blank" class="p-3 text-black text-2xl hover:bg-gray-300 rounded">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+
         <!-- Copyright -->
         <div class="text-center text-xs text-gray-700 mt-2">
             © 2025 Israt Jahan Reshma. All Rights Reserved.
         </div>
-    </footer>
+    </div>
+</footer>
+
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById("navbar");
+        const menuToggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+        
+        // Handle Navbar Hide on Scroll
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.scrollY || document.documentElement.scrollTop;
+        
+            if (scrollTop > lastScrollTop) {
+                // Scrolling down -> Hide navbar
+                navbar.style.transform = "translateY(-100%)";
+            } else {
+                // Scrolling up -> Show navbar
+                navbar.style.transform = "translateY(0)";
+            }
+        
+            lastScrollTop = scrollTop;
+        });
+        
+        // Handle Mobile Menu Toggle
+        menuToggle.addEventListener("click", function () {
+            menu.classList.toggle("hidden");
+        });
+        
+    </script>
     
     
 </body>

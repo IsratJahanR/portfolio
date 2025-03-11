@@ -1,8 +1,7 @@
-<section id="projects" class="h-screen py-12 bg-gray-50">
-    <h2 class="text-3xl font-extrabold text-center text-green-800 mb-8">My Projects</h2>
+<section id="projects" class="py-12 bg-gray-50">
+    <h2 class="text-3xl font-extrabold text-center text-gray-800 mb-8">My Projects</h2>
 
-    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 px-6">
-
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 px-4">
         <!-- CareHUB -->
         <div class="project-card border-green-500">
             <h3 class="project-title">CareHUB - Salon & Parlor Booking</h3>
@@ -34,7 +33,6 @@
             <p class="project-desc">A software project designed to monitor and track daily product prices. Users can report high prices to admins via product ID.</p>
             <a href="https://github.com/IsratJahanR/Bazar_Dor_Monitizing_with_java/tree/main/Bazar_dor" target="_blank" class="project-btn">View on GitHub</a>
         </div>
-
     </div>
 </section>
 
@@ -53,47 +51,24 @@
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
 
-    /* Automatic transition for project titles without layout shifting */
     .project-title {
         font-size: 1.2rem;
         font-weight: bold;
         color: #333;
         margin-bottom: 5px;
-        display: inline-block;
         transition: color 3s ease, transform 3s ease;
-    }
-
-    /* Keyframes for color change */
-    @keyframes titleColorChange {
-        0% {
-            color: #34D399;
-        }
-        33% {
-            color: #059669;
-        }
-        66% {
-            color: #38A169;
-        }
-        100% {
-            color: #34D399;
-        }
-    }
-
-    /* Keyframes for font size change */
-    @keyframes titleSizeChange {
-        0% {
-            transform: scale(1);
-        }
-        50% {
-            transform: scale(1.1);
-        }
-        100% {
-            transform: scale(1);
-        }
-    }
-
-    .project-title {
         animation: titleColorChange 6s infinite ease-in-out, titleSizeChange 6s infinite ease-in-out;
+    }
+
+    @keyframes titleColorChange {
+        0%, 100% { color: #34D399; }
+        33% { color: #059669; }
+        66% { color: #38A169; }
+    }
+
+    @keyframes titleSizeChange {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
     }
 
     .project-tech {
@@ -111,16 +86,37 @@
 
     .project-btn {
         display: inline-block;
-        padding: 6px 12px;
+        padding: 8px 14px;
         background-color: #34D399;
         color: white;
         font-size: 0.85rem;
         font-weight: bold;
         border-radius: 4px;
         transition: background 0.3s;
+        width: 100%;
+        text-align: center;
     }
 
     .project-btn:hover {
         background-color: #059669;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        #projects h2 {
+            font-size: 1.8rem;
+        }
+
+        .project-title {
+            font-size: 1.1rem;
+        }
+
+        .project-tech, .project-desc {
+            font-size: 0.85rem;
+        }
+
+        .project-btn {
+            width: 100%; /* Makes buttons full width on small screens */
+        }
     }
 </style>
