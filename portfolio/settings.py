@@ -21,7 +21,7 @@ SECRET_KEY = 'django-insecure-2s5!x)(1w_x1i3nq$vzknx$gl5+qkhe_p(asb*u7%6#k%5na-$
 # ALLOWED_HOSTS = ['https://portfolio-w6wf.onrender.com/', 'localhost', '127.0.0.1']
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', 'localhost' ,'127.0.0.1']
+ALLOWED_HOSTS = ['.vercel.app', 'localhost' ,'127.0.0.1','now.sh']
 
 # Application definition
 
@@ -43,7 +43,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    
 ]
 
 ROOT_URLCONF = 'portfolio.urls'
@@ -71,9 +71,13 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'default':{
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME' : 'railway',
+        'USER' : 'postgres',
+        'PASSWORD' : 'jEWGIQlbGmzQHtgFCfxKwvTocCqQAjMc' ,  
+        'HOST' : 'maglev.proxy.rlwy.net' ,
+        'PORT' : '45416', 
     }
 }
 
@@ -121,8 +125,9 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
   os.path.join(BASE_DIR, 'static')  
 ]
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build','staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build','static')
 
-
+MEDIAL_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'static/images')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
